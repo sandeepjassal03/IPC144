@@ -1,0 +1,56 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #6
+Full Name  : Sandeep Singh
+Student ID#: 162054217
+Email      : ssingh1224@myseneca.ca
+Section    : NGG
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. Parallel arrays are a concept designed to fulfill the purpose of linking data related to the same key (or an object) using 2 or more arrays. In this workshop, I used parallel arrays to store the cost of the item, the priority to be given, and the financing option availability. To fulfill the purpose that the concept of parallel arrays is designed for, it is important to store the data of the same key at the same index in the array. For instance, if the cost of Item 1 is stored at index 0, then the priority and the financing option for that item must be stored at the index 0 in their respective arrays so that they are linked together and can be retrieved simultaneously using a single iteration construct. It was easy to guess that parallel arrays need to be incorporated in this workshop because the item had three 'related' pieces of information which could be linked only using parallel arrays. A for loop, for instance, could be used to iterate through these parallel arrays to print data for the same item using just one loop.
+
+2. While traversing through arrays to retrieve the data, it is a common practice that the iterating variable used for iteration is initialized to 0 and not to 1. It is because of the fact that the array begins from 0, i.e., the index of the first element is 0 and not 1 and while printing the elements from the array, we need to use the iterating variable to get the data from the array. In case the iterating variable is used by initializing it to 1, the element stored at index 0 would not be printed until some adjustments are made to the variable put to print. An example from my code is as below:
+
+for (item_number = 0; item_number < total_wish_list_items; item_number++)
+	{
+		printf("\nItem-%d Details:\n", item_number + 1);
+
+		some code...
+
+		else if (item_cost_input >= MINIMUM_COST)
+		{
+			items_cost[item_number] = item_cost_input;
+			flag = 1;
+		}
+	} while (flag == 0);
+...some code
+do
+{
+	some code...
+	else if (item_priority_input > 0 || item_priority_input < 4)
+	{
+		item_priority[item_number] = item_priority_input;
+		flag = 1;
+	}
+} while (flag == 0);
+
+Here, instead of using items_cost[item_number + 1], I preferred making adjustments at the first printf statement because for using it the other way, I would have to make 2 changes:
+(i) Set condition to 'item_number <= total_wish_list_items';
+(ii) Set item_number to item_number + 1 in my code which would have made it complex because it was a more frequent occurrence than the one at the beginning.
+
+Due to the above reasons, it is advised and is a common practice to initialize the iterating variable to zero and not to one.
+
+3. Arrays are like a collection of similar objects, for instance, some apples arranged in rows and columns. For example, if we go to a supermarket, we see fruits, vegetables, or some other products kept in boxes and arranged in rows and columns. They are an example of arrays. Another example is a pack of cookies in which the cookies are arranged in a line which can be considered an array.
+
+Just like in case we need to pick the fifth cookie, we begin counting from the first one and count until we have reached the fifth cookie, same is the case with the arrays, but in arrays, we count from 0 and not from 1. So, the 5th cookie would be at the 4th number in the array when counted from 0. This is what an array is and how we can go to a specific item (or an element) in that collection of objects (or arrays).
+
+
+
+
+
+

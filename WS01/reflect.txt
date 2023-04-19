@@ -1,0 +1,23 @@
+*****************************************************************************
+                              Reflection
+                             Workshop - #1
+Full Name  : Sandeep Singh
+Student ID#: 162054217
+Email      : ssingh1224@myseneca.ca	
+Section    : NGG
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. In this workshop, I learned:
+  (i) how to use Visual Studio and create a project.
+  (ii) how to use Seneca's matrix system and submit projects using SSH applications like Putty and SFTP applications like WinSCP.
+  (iii) the methodology to code in a C-language file and edit it according to the needs of the program.
+
+2. SSH stands for Secure Shell. SSH helps a local computer to communicate with a remote host computer over a protected network. In my workshop, I used SSH to connect to the Matrix Cluster and to access my files for submission. To use SSH, one can either do it through an application such as Putty or use the Terminal( Command Prompt for Windows).
+
+3. SFTP stands for SSH File Transfer Protocol or simply Secure File Transfer Protocol. SFTP generates a secure environment for the transfer of files from the local computer to the remote server. For the workshop, I used SFTP to transfer my workshop files from my PC to the remote Linux server. WinSCP and FileZilla are two such applications that can be used to transfer files.
+

@@ -1,0 +1,54 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #8
+Full Name  : Sandeep Singh
+Student ID#: 162054217
+Email      : ssingh1224@myseneca.ca
+Section    : NGG
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. Size of a variable of a particular data type depends on the type of processor. For my machine, using the sizeof function in C, I determined the size allocated to int and double, which is 4 bytes and 8 bytes respectively.
+Accordingly, the structure ReportData has 3 integer type variables and 6 double type variables. So, 3*4 + 6*8 = 60 bytes of memory is the minimum memory that will be allocated to the structure. 
+
+We could directly pass the address of the structure with const keyword so that no change is made to it. This way, it would save space as a new copy of the same structure will not be created. The code snippet is as defined below:
+
+void displayReportData(const struct ReportData* Analysis_Report, const int cheapest_product_index)
+{
+	printf("%07d %10.2lf %10.1lf %10.4lf %9d %8d %8.1lf %7.2lf %7.5lf", *Analysis_Report.sku, 	*Analysis_Report.price, *Analysis_Report.weight_in_lbs, *Analysis_Report.weight_of_product_kgs, 	*Analysis_Report.weight_of_product_gms, *Analysis_Report.calories_per_serving, 	*Analysis_Report.total_servings, *Analysis_Report.cost_per_serving, 	*Analysis_Report.cost_of_calories_per_serve);
+}
+
+void start(void)
+{
+code....
+	for (count = 0; count < MAX_PRODUCTS; count++)
+		{
+			displayReportData(&CatFoodProductReport[count], least_cost);
+		}
+code....
+}
+
+
+2. ReportData and CatFoodInfo structures have 4 members in common. We could have omitted the creation of new variables and instead create an object of the structure CatFoodInfo as below:
+
+struct ReportData
+{
+    struct CatFoodInfo catFood;
+    double weight_of_product_kgs;
+    double total_servings;
+    double cost_per_serving;
+    double cost_of_calories_per_serve;
+};
+
+In the function displayReportData, I will apply the following changes so that my code works the same way but with more efficiency:
+
+void displayReportData(const struct ReportData Analysis_Report, const int cheapest_product_index)
+{
+	printf("%07d %10.2lf %10.1lf %10.4lf %9d %8d %8.1lf %7.2lf %7.5lf", Analysis_Report.catFood.product_sku, 	Analysis_Report.catFood.product_price, Analysis_Report.catFood.weight_of_product_lbs, 	Analysis_Report.weight_of_product_kgs, Analysis_Report.weight_of_product_gms, 	Analysis_Report.catFood.calories_per_serve, Analysis_Report.total_servings, 	Analysis_Report.cost_per_serving, 	Analysis_Report.cost_of_calories_per_serve);
+}
+
+As described above, I just modified the variable which will have that value, for instance, the sku variable which earlier was as AnalysisReport.product_sku and is AnalysisReport.c.product_sku, where catFood is the object defined in the structure ReportData that will have the link to all the variables and their values in the CatFoodInfo structure.

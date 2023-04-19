@@ -1,0 +1,46 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #7
+Full Name  : Sandeep Singh
+Student ID#: 162054217
+Email	     : ssingh1224@myseneca.ca
+Section    : NGG
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. The main benefit of using user-defined data types over using primitive data types is that when similar data is to be stored linked to one object, we need to create multiple variables over and over again. However, when we use structures, we just need to create an object of the structure, using which we can store similar data linked to one particular object only. To exemplify, here is an example from my code below:
+
+struct PlayerInfo
+{
+	int number_of_lives;
+	char player_symbol;
+	int count_of_found_treasures;
+	char user_entered_positions[MAX_PATH_LENGTH];
+};
+int main()
+{
+struct PlayerInfo Player_1 = { 0 };
+code...
+}
+
+Here, if we had multiple players, we could have created more objects using the same structure which would have prevented the recreation of variables for new players. Using arrays for storing the values could have been a choice, but it would have been difficult to differentiate between data of different users because structures allow us to call the variables inside by referring to the object, which helps in identification, which is not in the case of arrays. Hence, using structures over individual variables or arrays proves worthy and efficient, both for the code as well as in terms of time.
+
+2. In order to store the history of the games played as well as the results of the game, we can make the following two changes to fulfill the requirement:
+	1. Create a new user-defined data type and a new object of that data type every time a new history is needed to be stored. The structure will have the following variables:
+		(i) an array to store user-entered moves.
+		(ii) variable to store the treasures found.
+		(iii) variable to store the bombs witnessed.
+	2. Implement new statements to store the above data alongside while operating the game so that the data is stored simultaneously as the user operates the game.
+
+Following these steps, it is possible to successfully store the history of the gameplay which will uniquely refer to the player who played the game when a new object is created.
+
+3. Most time of my coding process was spent on designing the ruler that displayed the user-visited positions and the changes that needed to be made after each successful move taken by the user. It took less time to code as compared to the time that I spent on planning and structuring how it is supposed to work. In order to create a successful code, I made use of the technique of designing separate pseudocode (apart from the main one) and then testing it with the scenarios in the sample output to check if that successfully worked. It was clear enough that everything in this part of the code depended on just one number which was the user entered move. After making many changes to the pseudocode, I finally came up with one which could be successfully implemented in code and this is how I solved the part that I found difficult to analyze.
+
+
+
+
+

@@ -1,0 +1,29 @@
+
+*****************************************************************************
+                              Reflection
+                          Workshop - #3 (P2)
+Full Name  : Sandeep Singh
+Student ID#: 162054217	
+Email      : ssingh1224@myseneca.ca
+Section    : NGG
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. The line of code that I found most difficult to code is the below line: 
+
+printf(" 1|       %d         |          %d         |      %d      |   %d   |      %d \n", (coffee_1_type == 'L' || coffee_1_type == 'l') && (coffee_strength == 'M' || coffee_strength == 'm') || (coffee_1_type == 'B' || coffee_1_type == 'b') && (coffee_strength == 'r' || coffee_strength == 'R'), (coffee_1_grind_size == 'c' || coffee_1_grind_size == 'C') && (coffee_making_equipment_used == 'r' || coffee_making_equipment_used == 'R') || (coffee_1_grind_size == 'F' || coffee_1_grind_size == 'f') && (coffee_making_equipment_used == 'c' || coffee_making_equipment_used == 'C'), (number_of_daily_servings >= 1 && number_of_daily_servings <= 4) && (coffee_1_bag_weight_in_grams >= 0 && coffee_1_bag_weight_in_grams <= 250) || (number_of_daily_servings > 4 && number_of_daily_servings <= 9) && (coffee_1_bag_weight_in_grams > 250 && coffee_1_bag_weight_in_grams <= 500) || (number_of_daily_servings >= 10) && number_of_daily_servings > 500 && coffee_1_bag_weight_in_grams <= 1000, (coffee_1_served_with_cream == 'y' || coffee_1_served_with_cream == 'Y') && (coffee_preferred_with_cream == 'Y' || coffee_preferred_with_cream == 'y') || (coffee_1_served_with_cream == 'n' || coffee_1_served_with_cream == 'N') && (coffee_preferred_with_cream == 'n' || coffee_preferred_with_cream == 'N'), (coffee_making_equipment_used == 'r' || coffee_making_equipment_used == 'R') && (coffee_1_serving_temperature >= 60.0 && coffee_1_serving_temperature <= 69.9) || (coffee_making_equipment_used == 'c' || coffee_making_equipment_used == 'C') && (coffee_1_serving_temperature >= 70.0));
+
+The reason I found it difficult to code was that this piece of code was meant to compare the available products with the customer preferences and I had to use logical operators like '&&' and '||' to compare the requirement of the customer with the availability of products. It included almost every variable that was needed at different places along with carefully putting the logical 'and' and logical 'or' so as to match the requirements of the output. Also, for the daily servings and bag weights, I had to carefully review the inclusive ranges so that they are not matched with the incorrect range.
+
+2.Using the logical expression :  (coffee_1_type == 'L' || coffee_1_type == 'l')
+
+ The two other possible solutions are:
+
+  2.1 (coffee_1_type != 'M' || coffee_1_type != 'm') 
+  2.2 !(coffee_1_type != 'l' && coffee_1_type != 'L') [DeMorgan's Law]
+
+3. In part-1, it was logical to use a variable for storing the value of average product prices because the average price was to be used in further questions which demanded the use of logical operators and it was convenient to use the variable for comparing the values. However, in the case of part-2, the conversion of Celsius to Fahrenheit had no intended use in the rest of the program and that is why it was not a recommended approach for storing the value of the converted temperature to a variable.

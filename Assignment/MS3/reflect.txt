@@ -1,0 +1,28 @@
+*****************************************************************************
+						Assignment 1 - Milestone 3
+Full Name  : Sandeep Singh
+Student ID#: 162054217
+Email      : ssingh1224@myseneca.ca
+Section    : NGG
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. This milestone was different from the other 2 milestones done for the overall assignment in that in the previous milestones we did not use any other functions than the ones listed already in the instructions PDF. However, for this milestone, we needed to create some additional functions so that we could simplify our work. By creating those functions, we actually split our one big function into smaller chunks (decomposition) and in this way, we could also use these new functions in some other functions where we might have to write the same code over and over again. Some functions that I created are as below with their prototypes, use, and purpose:
+
+(i). int findLowestAppointmentDate(const struct Appointment Appts[], int max);
+	Purpose: This function helped to generate the earliest date on which there was an appointment. The purpose of this function is to give the lowest date which will be used to sort the data in chronological order.
+
+(ii). int sortAppointmentData(struct Appointment Appts[], int max);
+	Purpose: This function was created to sort the appointment data based on using the findLowestAppointmentDate function. The output of this function was used to compare it with the other values to help sort the array of appointment data.
+(iii). void inputAppointmentDate(int* inputYear, int* inputMonth, int* inputDay);
+	Purpose: This function was used to take the input for the date to book an appointment. It basically validates the input values according to the constraints.
+(iv). void inputAppointmentTime(int* inputHour, int* inputMinute);
+	Purpose: This function works the same way as the inputAppointmentDate function as it validates the user inputs for the time of appointment and checks if there is any other appointment at that time.
+
+2. The addAppointment function indeed performs multiple operations. This code for this function took 58 lines of code. I made use of computational techniques such as pattern recognition for validations and decomposition for user inputs. I first tried accumulating all the code in the addAppointment function only but shortly realized that it was becoming more complex and confusing. So, I identified parts of the code that could be incorporated into the main code by making use of the function call. This way, code becomes available for use in other places and not just in one place. This prevents duplicacy and avoids confusion while increasing the readability of the code. For instance, the inputAppointmentDate and inputAppointmentTime were the two main parts of the addAppointment function as this was where the validations for the day, month, year, and time for the appointment were performed. Other than that, the addAppointment function simply did not place an appointment but instead first checked the data if a slot was available for an appointment. This way, this function performed multiple operations such as taking the data and checking for available space. And then making use of some other functions to take the user input along with validations and at last compare the user entered date with the data available to check if it already has an appointment. If yes, it asks for some other date, otherwise it adds an appointment to the user entered date and time.
+
+3. Milestone-3, where we eventually create a fully functional Veterinary Clinic Management System, was indeed a time as well as effort demanding milestone. This is the stage where the assignment is successfully completed. The other 2 milestones were actually meant to serve this one, which otherwise would have become more complex if not broken into 3 parts. To successfully complete this milestone, I first went through the demands and details provided in the instructions pdf. Then I laid out my plan for this milestone where I broke the overall work into smaller parts which I decided to complete each day as a smaller daily milestone. I found out that, unlike the other milestones, this milestone demanded the creation of some extra functions other than the ones already listed out to achieve the overall code. This is where I found it a bit challenging because earlier I knew everything in detail to complete the milestone. However, when I started working on it on the first day, I really got confused about where to start the program. Then, I picked up the viewAppointments function and saw where this function was actually called in the main and I searched deeper and deeper until I reached the import functions. This was where I began coding the program and achieving my mini milestones on daily basis. All along the way, I made notes of the challenges and problems I faced at the end of the day and began the work of my next day by first resolving those problems. This structured way of doing this milestone really helped me a lot in achieving the successful completion and I really felt contended and satisfied after seeing my fully functional Management system.

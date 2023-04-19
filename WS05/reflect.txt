@@ -1,0 +1,59 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #5
+Full Name  : Sandeep Singh
+Student ID#: 162054217
+Email      : ssingh1224@myseneca.ca
+Section    : NGG
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. Two selection constructs that can be used to map the three characters of the month and the integer value of that month are the if-else if statement and the switch statement. A short example of getting the desired output using the two constructs is as below:
+	
+	1.1 If-Else If statement
+			if(month_of_log == 11)
+			{
+				printf("\n%d-NOV-0%d\n", year_of_log, day_of_log + 1);
+			}
+			else if(month_of_log == 12)
+			{
+				printf("\n%d-DEC-0%d\n", year_of_log, day_of_log + 1);
+			}
+
+	1.2 Switch statement
+			switch(month_of_log)
+			{
+			case 11:
+				printf("\n%d-NOV-0%d\n", year_of_log, day_of_log + 1);
+				break;
+			case 12:
+				printf("\n%d-DEC-0%d\n", year_of_log, day_of_log + 1);
+				break;
+			}
+
+2. The three types of iteration constructs are the for loop, the while loop, and the do-while loop. For this part of the workshop, I used the while iteration construct for validating the values entered by the user. It is because of the following reasons:
+
+(i) While loop allows the use of a logical expression to be evaluated in order to run the loop as compared to the for loop where an iterating variable is required so that the loop functions properly. 
+
+(ii) When compared with the do-while loop, I think using the while loop is a good option because it is a type of entry-controlled loop, i.e., the loop does not pass the control into the loop until the looping condition is not true. On the other hand, the do-while loop is an exit-controlled loop where it allows us to run the loop at least once before verifying the condition.
+
+Due to the above reasons, I preferred the while loop to validate the user-entered values as compared to for and do-while loops.
+
+3. Testing and debugging are important parts of developing a program and compiling it successfully without any errors. Basically, for the two main types of errors, i.e., syntactic and semantic, I used some standard techniques along with using the features of the Visual Studio Code.
+
+3.1 For the case of syntactic errors, I performed a scan check by reading the code as I typed it to look for any errors such as missing a semi-colon or using undeclared variable names, and many more. For these types of errors, the Visual Studio provided a red-colored symbol near the scroll bar and provided a hint to locate an error and resolve it. 
+
+3.2 For semantic errors, such as the operator symbol typo(using a & instead of && to represent logical AND) or a misplaced semi-colon for iterations and others, the techniques I employed were using the Visual Studio debugging tool which allows a step-by-step check of various statements by putting breakpoints, in case the IntelliSense incorporated in the Visual Studio does not work to check for such types of errors.
+
+For both types of errors, some common solutions are to walk through the code and check for any typing errors as described above. For the cases of evaluating the logical statements and conditions, I used the debugging feature of the Visual Studio where I put some breakpoints so as to test these statements and resolve them in case errors are found or modify them according to the required output so that the code works as expected.
+
+
+
+
+
+
+
